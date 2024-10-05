@@ -1,0 +1,51 @@
+Teste Técnico - Desenvolvedor Back-End / Full Stack
+Objetivo
+Criar uma API básica utilizando Node.js e Prisma, focando na estruturação de rotas, controllers, e models. O candidato deverá modelar os dados com o Prisma, mas não será necessário criar um banco de dados real. O objetivo é avaliar a capacidade de estruturar corretamente as entidades, rotas e controllers, bem como a qualidade da documentação.
+
+Detalhes do Projeto
+Funcionalidades:
+
+CRUD de Usuários:
+Criar, ler, atualizar e deletar usuários.
+CRUD de Documentos:
+Criar, ler, atualizar e deletar documentos vinculados a um usuário.
+Requisitos Técnicos:
+
+Node.js e Express para criar a API.
+Prisma para modelagem de dados, definindo as entidades e seus relacionamentos.
+Sem Banco de Dados Real: O candidato deverá definir os modelos Prisma (User e Document) e as relações entre eles, mas não precisa configurar ou conectar a um banco de dados real. As operações de CRUD podem ser simuladas usando objetos ou arrays em memória.
+Modelagem de Dados:
+
+Usuário (User):
+Campos: id, name, email.
+Relacionamento com documentos (um usuário pode ter vários documentos).
+Documento (Document):
+Campos: id, name, status, userId (chave estrangeira para o usuário).
+Os modelos devem ser definidos no arquivo schema.prisma, porém não é necessário executar as migrações ou criar um banco de dados real.
+Rotas e Controllers:
+
+Implementar as rotas para as seguintes operações:
+Usuários: CRUD completo (Create, Read, Update, Delete).
+Documentos: CRUD completo para documentos vinculados a um usuário.
+A lógica de cada operação deve ser implementada em controllers separados, seguindo boas práticas de organização.
+Simular as respostas das rotas com objetos ou arrays em memória (não é necessário persistir dados em um banco real).
+Documentação:
+
+Documentar as rotas da API, explicando como elas funcionariam caso estivessem conectadas a um banco de dados real.
+A documentação deve incluir:
+Endpoints de cada rota.
+Parâmetros esperados e exemplos de resposta.
+Instruções claras de como rodar o projeto localmente.
+Autenticação JWT (Opcional):
+
+Se desejar, o candidato pode implementar autenticação JWT para proteger rotas como "criar documento" ou "deletar documento". Esse item é opcional e não será critério eliminatório.
+React:
+Crie um exemplo básico de código em React, demonstrando como faria chamadas para a API que você criou no teste anterior e como exibiria os dados para o usuário na interface. Não é necessário criar um projeto React completo – apenas um arquivo com o código suficiente para entendermos sua abordagem. 
+ 
+Critérios de Avaliação
+Estruturação correta de rotas, controllers e models.
+Modelagem de dados adequada utilizando Prisma.
+Organização do código e boas práticas.
+Qualidade da documentação, clareza e organização.
+(Opcional) Implementação de autenticação JWT.
+Entendimento básico de React.
