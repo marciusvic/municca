@@ -33,3 +33,4 @@
 - React.js (Front-end)
 - Axios (Front-end)
 - Material-UI (Front-end)
+- TailwindCSS (Front-end)
