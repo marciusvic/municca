@@ -11,10 +11,10 @@
 4. Use Postman ou Insomnia para criar um usuário, a rota é `localhost:8000/api/auth/register` e o corpo da requisição é:
 ```json
 {
-    "name":"Márcio",
+    "name":"username",
     "role":"ADMIN",
-    "email":"marcio@municca.com",
-    "password":"senha123"
+    "email":"user@municca.com",
+    "password":"senha"
 }
 ```
 
