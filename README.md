@@ -8,6 +8,15 @@
 1. Entre na pasta `backend-municca`
 2. No diretório raiz, execute o comando `npm install`
 3. Após a instalação das dependências, execute o comando `sudo docker-compose up --build` ou `docker-compose up --build` caso esteja no Windows
+4. Use Postman ou Insomnia para criar um usuário, a rota é `localhost:8000/api/auth/register` e o corpo da requisição é:
+```json
+{
+    "name":"Márcio",
+    "role":"ADMIN",
+    "email":"marcio@municca.com",
+    "password":"senha123"
+}
+```
 
 ### Frontend
 1. Entre na pasta `frontend-municca`
