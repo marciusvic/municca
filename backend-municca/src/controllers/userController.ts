@@ -25,9 +25,14 @@ export const getUserById = async (req: Request, res: Response) => {
 
 // Criar novo usuário
 export const createUser = async (req: Request, res: Response) => {
-  const { name, email } = req.body;
+  const { name, email, password, role } = req.body;
   try {
-    const user = await userService.createUser(name, email);
+    // Validate required fields
+    if (!name || !email || !password || !role) {
+      return res.status(400).json({ error: 'Todos os campos são obrigatórios.' });
+    }
+
+    const user = await userService.createUser(name, email, password, role);
     res.status(201).json(user);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao criar usuário' });
@@ -37,9 +42,14 @@ export const createUser = async (req: Request, res: Response) => {
 // Atualizar usuário
 export const updateUser = async (req: Request, res: Response) => {
   const { id } = req.params;
-  const { name, email } = req.body;
+  const { name, email, password, role } = req.body;
   try {
-    const user = await userService.updateUser(Number(id), name, email);
+    // Validate required fields
+    if (!id || !name || !email || !role) {
+      return res.status(400).json({ error: 'Campos obrigatórios ausentes.' });
+    }
+
+    const user = await userService.updateUser(Number(id), name, email, password, role);
     res.json(user);
   } catch (error) {
     res.status(500).json({ error: 'Erro ao atualizar usuário' });

@@ -1,4 +1,5 @@
 import prisma from '../prisma';
+import { Status } from '@prisma/client';
 
 // Métodos CRUD para Document
 
@@ -15,20 +16,19 @@ const getDocumentById = async (id: number) => {
 };
 
 // Função para criar um documento
-const createDocument = async (name: string, status: string, userId: number) => {
-  return prisma.document.create({
-    data: { name, status, userId },
-  });
-};
+const createDocument = async (name: string, status: Status, userId: number) => {
+    return prisma.document.create({
+      data: { name, status, userId },
+    });
+  };
 
 // Função para atualizar um documento
-const updateDocument = async (id: number, name: string, status: string) => {
-  return prisma.document.update({
-    where: { id },
-    data: { name, status },
-  });
-};
-
+const updateDocument = async (id: number, name: string, status: Status) => {
+    return prisma.document.update({
+      where: { id },
+      data: { name, status },
+    });
+  };
 // Função para deletar um documento
 const deleteDocument = async (id: number) => {
   return prisma.document.delete({
